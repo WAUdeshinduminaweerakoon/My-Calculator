@@ -28,6 +28,7 @@
         <Button
 
             android:id="@+id/btn7"
+            android:onClick="onClickDigit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textSize="25dp"
@@ -40,6 +41,7 @@
         </Button>
         <Button
             android:id="@+id/btn8"
+            android:onClick="onClickDigit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textSize="25dp"
@@ -52,6 +54,7 @@
         </Button>
         <Button
             android:id="@+id/btn9"
+            android:onClick="onClickDigit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textSize="25dp"
@@ -89,6 +92,7 @@
         >
         <Button
             android:id="@+id/btn4"
+            android:onClick="onClickDigit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textSize="25dp"
@@ -101,6 +105,7 @@
         </Button>
         <Button
             android:id="@+id/btn5"
+            android:onClick="onClickDigit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textSize="25dp"
@@ -113,6 +118,7 @@
         </Button>
         <Button
             android:id="@+id/btn6"
+            android:onClick="onClickDigit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textSize="25dp"
@@ -150,6 +156,7 @@
         >
         <Button
             android:id="@+id/btn1"
+            android:onClick="onClickDigit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textSize="25dp"
@@ -162,6 +169,7 @@
         </Button>
         <Button
             android:id="@+id/btn2"
+            android:onClick="onClickDigit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textSize="25dp"
@@ -174,6 +182,7 @@
         </Button>
         <Button
             android:id="@+id/btn3"
+            android:onClick="onClickDigit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textSize="25dp"
@@ -211,6 +220,7 @@
         >
         <Button
             android:id="@+id/decimalPoint"
+            android:onClick="onClickDigit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textSize="25dp"
@@ -223,6 +233,7 @@
         </Button>
         <Button
             android:id="@+id/btn0"
+            android:onClick="onClickDigit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textSize="25dp"
