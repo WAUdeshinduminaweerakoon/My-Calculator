@@ -246,6 +246,7 @@
         </Button>
         <Button
             android:id="@+id/clear"
+            android:onClick="onClear"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textSize="20dp"
