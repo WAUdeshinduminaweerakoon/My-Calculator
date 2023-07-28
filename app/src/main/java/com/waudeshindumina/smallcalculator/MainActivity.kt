@@ -8,6 +8,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
+
+    var decimalPoint = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -20,5 +22,11 @@ class MainActivity : AppCompatActivity() {
     fun onClear(view: View){
         InputText.text = ""
 
+    }
+    fun DecimalPoint(view :View){
+        if(!decimalPoint){
+            InputText.append((view as Button).text)
+            decimalPoint = true
+        }
     }
 }

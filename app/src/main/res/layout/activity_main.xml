@@ -220,7 +220,7 @@
         >
         <Button
             android:id="@+id/decimalPoint"
-            android:onClick="onClickDigit"
+            android:onClick="DecimalPoint"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textSize="25dp"
