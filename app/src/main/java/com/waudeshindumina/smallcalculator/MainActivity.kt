@@ -9,7 +9,11 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    var decimalPoint = false
+    private var decimalPoint = false
+    private var numberType = false
+    private var programmeStarted = false
+    private var startedMinus =false
+    var inPressedEqual = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -29,4 +33,44 @@ class MainActivity : AppCompatActivity() {
             decimalPoint = true
         }
     }
+
+    fun inOperatorAdd(): Boolean {
+
+        var inputTextTyped = InputText.text.toString()
+
+        var minuses = inputTextTyped.split("-")//97-78
+
+        startedMinus = minuses.size <3
+
+
+        return if(inputTextTyped.startsWith("-") && startedMinus){
+            false
+        }else{
+            (inputTextTyped.contains("-") || inputTextTyped.contains("+")||
+                    inputTextTyped.contains("*")|| inputTextTyped.contains("/"))
+        }
+
+    }
+
+    fun onOperator(view: View){
+        if(!inOperatorAdd()&& numberType || !programmeStarted){
+            InputText.append((view as Button).text)
+            decimalPoint = false
+            numberType = false
+            programmeStarted = true
+        }
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
