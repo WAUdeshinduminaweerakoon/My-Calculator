@@ -67,6 +67,7 @@
         </Button>
         <Button
             android:id="@+id/Division"
+            android:onClick="onClickDigit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textSize="25dp"
