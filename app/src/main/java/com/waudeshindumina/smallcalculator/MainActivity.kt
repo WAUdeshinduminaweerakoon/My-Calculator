@@ -13,13 +13,18 @@ class MainActivity : AppCompatActivity() {
     private var numberType = false
     private var programmeStarted = false
     private var startedMinus =false
-    var inPressedEqual = false
+    var isPressedEqual = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
 
     fun onClickDigit(view: View) {
+
+        if (isPressedEqual){
+            InputText.text = ""
+            isPressedEqual= false
+        }
         InputText.append((view as Button).text)
         numberType = true
 
@@ -56,13 +61,15 @@ class MainActivity : AppCompatActivity() {
     fun onOperator(view: View){
         if(!isOperatorAdd()&& numberType || !programmeStarted){
             InputText.append((view as Button).text)
+
+            isPressedEqual = false
             decimalPoint = false
             numberType = false
             programmeStarted = true
         }
     }
-
     fun onEqual(view: View) {
+        isPressedEqual = true
 
         if(numberType){
             var inputTextView = InputText.text.toString()
