@@ -67,12 +67,22 @@ class MainActivity : AppCompatActivity() {
         if(numberType){
             var inputTextView = InputText.text.toString()
 
+            var prefix = ""
             try {
+                if(inputTextView.startsWith("-")){
+                    prefix = "-"
+                        inputTextView =inputTextView.substring(1)
+                    }
+
                 if(inputTextView.contains("-")){
                     var splitValues = inputTextView.split("-")
 
                     var one = splitValues[0]
                     var two = splitValues[1]
+
+                    if(prefix.isNotEmpty()){
+                        one = prefix +one
+                    }
 
                     InputText.text=(one.toDouble()-two.toDouble()).toString()
                 }
