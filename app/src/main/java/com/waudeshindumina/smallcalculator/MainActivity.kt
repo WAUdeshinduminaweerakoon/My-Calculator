@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     fun onClickDigit(view: View) {
         InputText.append((view as Button).text)
+        numberType = true
 
     }
     fun onClear(view: View){
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun inOperatorAdd(): Boolean {
+    fun isOperatorAdd(): Boolean {
 
         var inputTextTyped = InputText.text.toString()
 
@@ -53,11 +54,31 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onOperator(view: View){
-        if(!inOperatorAdd()&& numberType || !programmeStarted){
+        if(!isOperatorAdd()&& numberType || !programmeStarted){
             InputText.append((view as Button).text)
             decimalPoint = false
             numberType = false
             programmeStarted = true
+        }
+    }
+
+    fun onEqual(view: View) {
+
+        if(numberType){
+            var inputTextView = InputText.text.toString()
+
+            try {
+                if(inputTextView.contains("-")){
+                    var splitValues = inputTextView.split("-")
+
+                    var one = splitValues[0]
+                    var two = splitValues[1]
+
+                    InputText.text=(one.toDouble()-two.toDouble()).toString()
+                }
+            }catch (e:java.lang.ArithmeticException){
+                e.printStackTrace()
+            }
         }
     }
 

@@ -195,6 +195,7 @@
         </Button>
         <Button
             android:id="@+id/Subtract"
+            android:onClick="onClickDigit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textSize="25dp"
@@ -219,7 +220,7 @@
 
         >
         <Button
-            android:id="@+id/decimalPoint"
+            android:id="@+id/decimal"
             android:onClick="DecimalPoint"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -280,7 +281,8 @@
         android:layout_weight="1"
         >
         <Button
-            android:id="@+id/aquals"
+            android:id="@+id/equals"
+            android:onClick="onEqual"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textSize="30dp"
