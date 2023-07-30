@@ -260,6 +260,7 @@
         </Button>
         <Button
             android:id="@+id/add"
+            android:onClick="onClickDigit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textSize="25dp"
