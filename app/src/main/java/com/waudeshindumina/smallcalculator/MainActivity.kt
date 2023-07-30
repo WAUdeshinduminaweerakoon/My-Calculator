@@ -99,6 +99,19 @@ class MainActivity : AppCompatActivity() {
 
                     InputText.text=(one.toDouble()+ two.toDouble()).toString()
                 }
+                if(inputTextView.contains("*")){
+                    var splitValues = inputTextView.split("*")
+
+                    var one = splitValues[0]
+                    var two = splitValues[1]
+
+                    if(prefix.isNotEmpty()){
+                        one = prefix +one
+                    }
+
+                    InputText.text=(one.toDouble()*two.toDouble()).toString()
+                }
+
             }catch (e:java.lang.ArithmeticException){
                 e.printStackTrace()
             }

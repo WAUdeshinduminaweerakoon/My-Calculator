@@ -131,6 +131,7 @@
         </Button>
         <Button
             android:id="@+id/Product"
+            android:onClick="onClickDigit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textSize="25dp"
